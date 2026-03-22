@@ -12,31 +12,31 @@ Claude Code 的 CLAUDE.md 是可以被**引导生成**的。只需把蓝图内�
 
 ```
 claude-code-blueprint/
-├── bootstrap/          ← 引导程序：初始化 Claude Code 自身的工作环境
-│   ├── project_memory.md    项目级记忆系统（在当前项目下创建 .claude/workspace/）
-│   └── global_memory.md     全局级记忆系统（在 ~/.claude/ 下创建 workspace/）
-├── permission/         ← 权限蓝图：引导 Claude Code 开放或关闭特定配置
-└── project/            ← 项目蓝图：引导 Claude Code 创建项目骨架和核心逻辑
+├── bootstrap/       ← 引导程序：初始化 Claude Code 自身的工作环境
+├── permission/      ← 权限蓝图：引导 Claude Code 开放或关闭特定配置
+└── project/         ← 项目蓝图：引导 Claude Code 创建项目骨架和核心逻辑
 ```
 
-## 蓝图分类
+## 蓝图列表
 
 ### Bootstrap（引导程序）
 
-初始化 Claude Code 自身的工作环境，包括记忆系统、CLAUDE.md 规则等。
-
 | 蓝图 | 说明 |
 |------|------|
-| `bootstrap/project_memory.md` | 在当前项目下构建完整的记忆系统（project.md / memory.md / todo.md / logs/） |
+| `bootstrap/project_memory.md` | 在当前项目下构建完整的持久化记忆系统 |
 | `bootstrap/global_memory.md` | 在 `~/.claude/` 下构建全局记忆系统，跨项目共享 |
+| `bootstrap/quick_todo.md` | 轻量级杂事助手，随口说就记，按天分组，7 天自动清理 |
 
 ### Permission（权限配置）
 
-引导 Claude Code 修改 settings.json，开放或限制特定权限。
+| 蓝图 | 说明 |
+|------|------|
+| `permission/open_all.md` | 一键开启所有工具权限，免去确认提示 |
+| `permission/interactive_setup.md` | 交互式引导用户逐项选择需要开放的权限 |
 
 ### Project（项目蓝图）
 
-引导 Claude Code 按照预设的架构创建项目骨架、核心代码和配置文件。
+暂无，待补充。
 
 ## 如何编写自己的蓝图
 
