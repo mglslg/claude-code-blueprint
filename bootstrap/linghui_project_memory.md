@@ -2,17 +2,17 @@
 
 ## 第一步：创建目录结构
 
-在项目根目录下创建以下文件夹（如果 `.llm-workspace` 目录已存在则不要覆盖已有文件）：
+在项目根目录下创建以下文件夹（如果 `workspace` 目录已存在则不要覆盖已有文件）：
 
 ```
-.llm-workspace/
+workspace/
 ├── logs/
 └── （其他文件将在后续步骤创建）
 ```
 
-## 第二步：创建 .llm-workspace/project.md
+## 第二步：创建 workspace/project.md
 
-创建文件 `.llm-workspace/project.md`，写入以下内容：
+创建文件 `workspace/project.md`，写入以下内容：
 
 ```markdown
 # 项目知识
@@ -23,9 +23,9 @@
 （请在了解项目后补充此处内容）
 ```
 
-## 第三步：创建 .llm-workspace/memory.md
+## 第三步：创建 workspace/memory.md
 
-创建文件 `.llm-workspace/memory.md`，写入以下内容：
+创建文件 `workspace/memory.md`，写入以下内容：
 
 ```markdown
 # 长期记忆
@@ -38,9 +38,9 @@
 记忆内容...
 ```
 
-## 第四步：创建 .llm-workspace/todo.md
+## 第四步：创建 workspace/todo.md
 
-创建文件 `.llm-workspace/todo.md`，写入以下内容：
+创建文件 `workspace/todo.md`，写入以下内容：
 
 ```markdown
 # 工作状态
@@ -79,7 +79,7 @@
 
 ## 文件体系
 
-.llm-workspace/
+workspace/
 ├── project.md                    ← 项目知识（架构、技术细节、约定）
 ├── memory.md                     ← 用户偏好、反复强调的事、长期记忆（带时间戳）
 ├── todo.md                       ← 当前阶段 + 卡点 + 进行中 + 待办
@@ -95,9 +95,9 @@
 ### 规则 1：对话开始时恢复上下文
 
 每次新对话开始时，你必须做的第一件事是读取以下三个文件：
-- .llm-workspace/project.md
-- .llm-workspace/memory.md
-- .llm-workspace/todo.md
+- workspace/project.md
+- workspace/memory.md
+- workspace/todo.md
 
 这三个文件优先级完全一样，都必须读取。读取后你就知道项目背景、用户偏好、当前进度。不要跳过这一步。
 
@@ -140,7 +140,7 @@
 
 ### 规则 7：日志文件不自动加载
 
-.llm-workspace/logs/ 目录下的文件不在对话开始时读取。只在用户要求查看历史记录时才去读取。
+workspace/logs/ 目录下的文件不在对话开始时读取。只在用户要求查看历史记录时才去读取。
 ```
 
 ## 第六步：确认
