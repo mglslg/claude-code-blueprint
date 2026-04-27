@@ -2,12 +2,11 @@
 
 ## 第一步：创建目录结构
 
-在项目根目录下创建以下文件夹（如果 `.llm-workspace` 目录已存在则不要覆盖已有文件）：
+在项目根目录下创建以下文件夹：
 
 ```
 .llm-workspace/
-├── logs/
-└── （其他文件将在后续步骤创建）
+└── logs/
 ```
 
 ## 第二步：创建 .llm-workspace/project.md
@@ -70,20 +69,24 @@
 # 记忆架构与自主进化规则
 
 > 本文件只存放记忆系统的文件体系说明和自主进化规则。
-> 项目知识 → `project.md`
-> 用户偏好与长期记忆 → `memory.md`
-> 工作任务 → `todo.md`
-> 操作日志 → `logs/YYYY-MM-DD.md`
+> 项目知识 → `.llm-workspace/project.md`
+> 用户偏好与长期记忆 → `.llm-workspace/memory.md`
+> 工作任务 → `.llm-workspace/todo.md`
+> 操作日志 → `.llm-workspace/logs/YYYY-MM-DD.md`
 
 ---
 
 ## 文件体系
 
+.claude/
+├── CLAUDE.md                     ← 本文件：只放记忆架构规则
+└── settings.json                ← 权限配置
+
 .llm-workspace/
-├── project.md                    ← 项目知识（架构、技术细节、约定）
-├── memory.md                     ← 用户偏好、反复强调的事、长期记忆（带时间戳）
-├── todo.md                       ← 当前阶段 + 卡点 + 进行中 + 待办
-└── logs/                         ← 按日操作日志（不自动加载，按需检索）
+├── project.md                   ← 项目知识（架构、技术细节、约定）
+├── memory.md                    ← 用户偏好、反复强调的事、长期记忆（带时间戳）
+├── todo.md                      ← 当前阶段 + 卡点 + 进行中 + 待办
+└── logs/                        ← 按日操作日志（不自动加载，按需检索）
     └── YYYY-MM-DD.md
 
 ---
