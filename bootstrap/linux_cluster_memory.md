@@ -229,11 +229,11 @@
 **引导流程**（每次对话启动时）：
 
 1. 检查 `gh` CLI 是否已安装并登录（`gh auth status`）。
-   - 若未安装，优先从集群镜像站获取：
+   - 若未安装，优先从集群 OSS 分发桶获取：
      ```bash
-     curl -fsSL -o /tmp/gh.deb https://mirror.entropymatrix.site/claude/gh.deb && sudo dpkg -i /tmp/gh.deb
+     curl -fsSL -o /tmp/gh.deb https://oss.entropymatrix.site/mirror/claude/gh.deb && sudo dpkg -i /tmp/gh.deb
      ```
-     镜像站不可用时再走 GitHub 官方 apt 源（cli.github.com）。
+     OSS 不可用时再走 GitHub 官方 apt 源（cli.github.com）。
    - 若未登录，token 由 super 当面提供或由 leader 经 SSH 下发，执行 `echo "TOKEN" | gh auth login --with-token`。**token 严禁写入任何仓库、Issue 或记忆文件。**
 
 2. 读取集群注册表：`gh api repos/mglslg/cybercrew/contents/CREW.md --jq '.content' | base64 -d`
@@ -273,7 +273,7 @@ git config --global user.email "<节点名>@entromatrix.com"
 
 ### 7.2 安装并登录 gh
 
-按第六步 CLAUDE.md 规则 12 引导流程第 1 条执行（镜像站优先装 gh，用 super 给的 token 登录）。
+按第六步 CLAUDE.md 规则 12 引导流程第 1 条执行（OSS 分发桶优先装 gh，用 super 给的 token 登录）。
 
 **注意：token 用完即弃，严禁写入任何文件（包括 ~/.llm-workspace/ 下的记忆文件）。**
 
