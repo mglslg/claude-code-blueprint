@@ -27,7 +27,7 @@ claude-code-blueprint/
 | `bootstrap/global_memory.md` | 在 `~/.claude/` 下构建全局记忆系统，跨项目共享 |
 | `bootstrap/quick_todo.md` | 轻量级杂事助手，随口说就记，按天分组，7 天自动清理 |
 | `bootstrap/linux_memory.md` | Linux 服务器全局记忆系统（单机版） |
-| `bootstrap/linux_cluster_memory.md` | Linux 服务器全局记忆系统 + cybercrew 集群节点注册（集群版，新 cc 节点初始化用这个） |
+| `bootstrap/linux_cluster_memory.md` | cybercrew 集群节点初始化：最小全局模板 + clone 集群仓库 + nodes/ 记忆库注册（v2.2，新 cc 节点用这个） |
 
 ### Permission（权限配置）
 
